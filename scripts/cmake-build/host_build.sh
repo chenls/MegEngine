@@ -133,7 +133,7 @@ function cmake_build() {
     mkdir -p $INSTALL_DIR
     cd_real_build_dir $BUILD_DIR
     # fork a new bash to handle EXTRA_CMAKE_ARGS env with space
-    bash -c "cmake -G Ninja \
+    bash -c "cmake -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS=ON\
         -DCMAKE_BUILD_TYPE=$BUILD_TYPE \
         -DMGE_INFERENCE_ONLY=$MGE_INFERENCE_ONLY \
         -DMGE_WITH_CUDA=$MGE_WITH_CUDA \

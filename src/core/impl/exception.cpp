@@ -125,12 +125,12 @@ CnmlError::CnmlError(const std::string& msg) : SystemError(msg) {}
 
 bool mgb::has_uncaught_exception() {
 #if MGB_ENABLE_EXCEPTION
-#if __cplusplus > 201402L
-    // C++17; see https://stackoverflow.com/questions/38456127/what-is-the-value-of-cplusplus-for-c17
-    return std::uncaught_exceptions() != 0;
-#else
+// #if __cplusplus > 201402L
+//     // C++17; see https://stackoverflow.com/questions/38456127/what-is-the-value-of-cplusplus-for-c17
+//     return std::uncaught_exceptions() != 0;
+// #else
     return std::uncaught_exception();
-#endif
+// #endif
 #else
     return false;
 #endif

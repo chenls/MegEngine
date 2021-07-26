@@ -8,8 +8,11 @@ __pycache__/
 
 # Editor and IDE Config
 .vscode/
+.cache/
 .vs/
 .idea/
 
 # CMake
 compile_commands.json
+
+build_dir/
