@@ -1,0 +1,23 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug",
+            "env": {
+                "LD_LIBRARY_PATH": "${workspaceFolder}/build_dir/host/MGE_WITH_CUDA_OFF/MGE_INFERENCE_ONLY_ON/Debug/install/lib/"
+            },
+            "program": "${workspaceFolder}/build_dir/host/MGE_WITH_CUDA_OFF/MGE_INFERENCE_ONLY_ON/Debug/install/bin/xor_deploy",
+            "args": [
+                "${workspaceFolder}/xornet_deploy.mge",
+                "1",
+                "1"
+            ],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

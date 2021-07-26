@@ -21,7 +21,7 @@ function usage() {
 
 READLINK=readlink
 OS=$(uname -s)
-BUILD_TYPE=Release
+BUILD_TYPE=Debug
 MGE_WITH_CUDA=OFF
 MGE_INFERENCE_ONLY=ON
 MGE_WINDOWS_BUILD_ARCH=x64
@@ -31,7 +31,7 @@ REMOVE_OLD_BUILD=false
 NINJA_VERBOSE=OFF
 BUILD_DEVELOP=ON
 NINJA_DRY_RUN=OFF
-SPECIFIED_TARGET="install/strip"
+SPECIFIED_TARGET="install"
 if [[ $OS =~ "NT" ]]; then
     echo "Windows do not support strip/install by defaut"
     SPECIFIED_TARGET=""

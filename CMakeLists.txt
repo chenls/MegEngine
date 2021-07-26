@@ -1027,6 +1027,7 @@ add_subdirectory(src)
 
 if(MGE_BUILD_SDK)
     add_subdirectory(sdk/load-and-run)
+    add_subdirectory(sdk/xor-deploy)
 endif()
 
 
